@@ -4,7 +4,7 @@ const defaultFruits = [
   { name: "Buddha[physical]", image: "images/buddha.png", quantity: 3, price: 20 },
   { name: "Dough[physical]",  image: "images/dough.png",  quantity: 1, price: 59 },
   { name: "Yeti[physical]",  image: "images/yeti.png",  quantity: 1, price: 139 },
-  { name: "Venom[Physical]", image: "image/venom.png", quantity: 2, price: 39 }
+  { name: "Venom[Physical]", image: "images/venom.png", quantity: 2, price: 39 }
 ];
 
 const rarity = {
