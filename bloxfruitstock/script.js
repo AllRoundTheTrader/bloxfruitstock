@@ -1,7 +1,7 @@
 const defaultFruits = [
   { name: "Tiger[physical]",  image: "images/tiger.png",  quantity: 1, price: 149 },
   { name: "Dragon[physical]", image: "images/dragon.png", quantity: 2, price: 899 },
-  { name: "Buddha[physical]", image: "images/buddha.png", quantity: 1, price: 20 },
+  { name: "Buddha[physical]", image: "images/buddha.png", quantity: 3, price: 20 },
   { name: "Dough[physical]",  image: "images/dough.png",  quantity: 1, price: 59 },
   { name: "Yeti[physical]",  image: "images/yeti.png",  quantity: 1, price: 139 }
 ];
