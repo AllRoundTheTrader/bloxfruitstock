@@ -4,12 +4,20 @@ const DM_LINK = "https://ig.me/m/" + INSTAGRAM_USERNAME;
 
 // ===== STOCK LIST: edit name, price, stock, or image here =====
 const fruits = [
-    { name: "Tiger[physical]",  price: 149, stock: 1, image: "images/tiger.png"  },
-    { name: "Dragon[physical]", price: 899, stock: 3, image: "images/dragon.png" },
-    { name: "Buddha[physical]", price: 20,  stock: 1, image: "images/buddha.png" },
-    { name: "Dough[physical]",  price: 59,  stock: 1, image: "images/dough.png"  },
-    { name: "Yeti[physical]",   price: 139, stock: 1, image: "images/yeti.png"   },
-    { name: "Venom[physical]",  price: 40,  stock: 1, image: "images/venom.png"  }
+    { name: "Dragon[physical]", price: 899, stock: 0, image: "images/dragon.png" },  
+  { name: "Kitsune[physical]",  price: 499,  stock: 1, image: "images/kitsune.png"  },
+  { name: "Control[physical]",  price: 149,  stock: 1, image: "images/controls.png"  },
+  { name: "Tiger[physical]",  price: 119, stock: 1, image: "images/tiger.png"  },
+  { name: "Yeti[physical]",   price: 109, stock: 1, image: "images/yeti.png"   },
+  { name: "Gas[physical]",  price: 79,  stock: 1, image: "images/gass.png"  }, 
+  { name: "Lightning[physical]",  price: 65,  stock: 1, image: "images/lightning.png"  },
+  { name: "Dough[physical]",  price: 59,  stock: 1, image: "images/dough.png"  },
+  { name: "Venom[physical]",  price: 40,  stock: 1, image: "images/venom.png"  },
+  { name: "Portal[physical]", price: 20,  stock: 1, image: "images/portal.png" },
+  { name: "Buddha[physical]", price: 20,  stock: 1, image: "images/buddhaa.png" },
+  { name: "Gravity[physical]",  price: 20,  stock: 1, image: "images/gravity.png"  },
+  { name: "Blizzard[physical]",  price: 10,  stock: 1, image: "images/blizzards.png"  }
+    
 ];
 
 const container = document.getElementById("fruit-container");
