@@ -1,25 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blox Fruits Stock</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Blox Fruits Stock</h1>
-    <p id="summary"></p>
-  </header>
+// ===== SETTINGS: change these =====
+const INSTAGRAM_USERNAME = "bloxythetrader"; // without the @
+const DM_LINK = "https://ig.me/m/" + INSTAGRAM_USERNAME;
 
-  <main>
-    <input type="text" id="search" placeholder="Search a fruit">
-    <div id="fruit-list" class="grid"></div>
-  </main>
+// ===== STOCK LIST: edit name, price, stock, or image here =====
+const fruits = [
+    { name: "Tiger[physical]",  price: 149, stock: 1, image: "images/tiger.png"  },
+    { name: "Dragon[physical]", price: 899, stock: 3, image: "images/dragon.png" },
+    { name: "Buddha[physical]", price: 20,  stock: 1, image: "images/buddha.png" },
+    { name: "Dough[physical]",  price: 59,  stock: 1, image: "images/dough.png"  },
+    { name: "Yeti[physical]",   price: 139, stock: 1, image: "images/yeti.png"   },
+    { name: "Venom[physical]",  price: 40,  stock: 1, image: "images/venom.png"  }
+];
 
-  <script src="script.js"></script>
-</body>
-</html>
+const container = document.getElementById("fruit-container");
+const searchBox = document.getElementById("search");
+const openBtn = document.getElementById("open-ig");
+
+if (openBtn) {
+    openBtn.href = DM_LINK;
+}
+
+function showFruits(list) {
+    container.innerHTML = "";
+
+    list.forEach(function (fruit) {
+        const inStock = fruit.stock > 0;
+        const card = document.createElement("div");
+        card.className = "fruit-card";
+
+        card.innerHTML = `
+            <img src="${fruit.image}" alt="${fruit.name}">
+            <h3>${fruit.name}</h3>
+            <p class="price">₹${fruit.price}</p>
+            <span class="stock ${inStock ? "" : "out"}">
+                ${inStock ? "In Stock x" + fruit.stock : "Out of Stock"}
+            </span>
+            ${inStock ? `<a class="buy-btn" href="${DM_LINK}" target="_blank" rel="noopener">Buy via Instagram DM</a>` : ""}
+        `;
+
+        container.appendChild(card);
+    });
+}
+
+searchBox.addEventListener("input", function () {
+    const text = searchBox.value.toLowerCase();
+    const filtered = fruits.filter(function (fruit) {
+        return fruit.name.toLowerCase().includes(text);
+    });
+    showFruits(filtered);
+});
+
+showFruits(fruits);
