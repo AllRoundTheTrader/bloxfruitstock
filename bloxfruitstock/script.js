@@ -13,6 +13,7 @@ const fruits = [
   { name: "Lightning[physical]",  price: 65,  stock: 1, image: "images/lightning.png"  },
   { name: "Dough[physical]",  price: 59,  stock: 1, image: "images/dough.png"  },
   { name: "Venom[physical]",  price: 40,  stock: 1, image: "images/venom.png"  },
+    { name: "Trex[physical]", price: 39, stock: 1, image: "images/trex.png" },
   { name: "Portal[physical]", price: 20,  stock: 1, image: "images/portal.png" },
   { name: "Buddha[physical]", price: 20,  stock: 1, image: "images/buddhaa.png" },
   { name: "Gravity[physical]",  price: 20,  stock: 1, image: "images/gravity.png"  },
